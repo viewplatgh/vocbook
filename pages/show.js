@@ -1,22 +1,22 @@
-import Layout from '../components/layout.js'
-import fetch from 'isomorphic-unfetch'
+import Layout from "../components/layout.js";
+import fetch from "isomorphic-unfetch";
 
-const Show = (props) => (
+const Show = props => (
   <Layout>
     <h1>{props.show.name}</h1>
-    <div dangerouslySetInnerHTML={{__html: props.show.summary}}></div>
-    <img src={props.show.image.medium}/>
+    <div dangerouslySetInnerHTML={{ __html: props.show.summary }} />
+    <img src={props.show.image.medium} />
   </Layout>
-)
+);
 
-Show.getInitialProps = async function (context) {
-  const { id } = context.query
-  const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
-  const show = await res.json()
+Show.getInitialProps = async function(context) {
+  const { id } = context.query;
+  const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  const show = await res.json();
 
-  console.log(`Fetched show: ${show.name}`)
+  console.log(`Fetched show: ${show.name}`);
 
-  return { show }
-}
+  return { show };
+};
 
-export default Show
+export default Show;
