@@ -1,13 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
-import { withRouter } from "next/router";
 import Layout from "../components/layout.js";
 import Card from "../components/card.js";
 
-export default connect()(
-  withRouter(props => (
-    <Layout>
-      <Card />
-    </Layout>
-  ))
-);
+class Index extends React.Component {
+  static async getInitalProps(props) {
+    const { store, isServer } = props.ctx;
+    // store.dispatch();
+  }
+
+  componentDidMount() {
+    //
+  }
+
+  render() {
+    return (
+      <Layout>
+        <Card />
+      </Layout>
+    );
+  }
+}
+
+export default connect()(Index);

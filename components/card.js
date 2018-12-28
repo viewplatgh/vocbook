@@ -1,5 +1,3 @@
-import "../node_modules/bulma/bulma.sass";
-
 const Card = () => (
   <article className="tile is-child">
     <p className="title" style={{ textAlign: "center", fontSize: 48 }}>

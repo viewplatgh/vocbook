@@ -1,9 +1,9 @@
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 
 const About = () => (
   <Layout>
     <p>About vocbook</p>
   </Layout>
-)
+);
 
-export default About
+export default About;
