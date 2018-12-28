@@ -10,7 +10,9 @@ const Layout = props => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>Vocabulary book</title>
     </Head>
-    <div className="navbar" />
+    <div className="navbar">
+      <Header />
+    </div>
     <div className="container">
       <div className="tile is-ancestor">
         <div className="tile is-12">

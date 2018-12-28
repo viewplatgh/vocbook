@@ -1,10 +1,13 @@
-import Layout from "../components/layout.js";
+import React from "react";
+import { connect } from "react-redux";
 import { withRouter } from "next/router";
-import Markdown from "react-markdown";
+import Layout from "../components/layout.js";
 import Card from "../components/card.js";
 
-export default withRouter(props => (
-  <Layout>
-    <Card />
-  </Layout>
-));
+export default connect()(
+  withRouter(props => (
+    <Layout>
+      <Card />
+    </Layout>
+  ))
+);
