@@ -1,4 +1,4 @@
-import "../node_modules/bulma/bulma.sass";
+import "../node_modules/bulma/css/bulma.css";
 
 import App, { Container } from "next/app";
 import React from "react";

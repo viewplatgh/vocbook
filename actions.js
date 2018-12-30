@@ -1,7 +1,10 @@
 export const actionTypes = {
   FAILURE: "FAILURE",
-  INCREMENT: "INCREMENT",
-  DECREMENT: "DECREMENT",
+  PREVIOUS_PAGE: "PREVIOUS_PAGE",
+  NEXT_PAGE: "NEXT_PAGE",
+  PREVIOUS_WORD: "PREVIOUS_WORD",
+  NEXT_WORD: "NEXT_WORD",
+  EDIT_WORD: "EDIT_WORD",
   RESET: "RESET",
   LOAD_DATA: "LOAD_DATA",
   LOAD_DATA_SUCCESS: "LOAD_DATA_SUCCESS",
@@ -16,12 +19,24 @@ export function failure(error) {
   };
 }
 
-export function increment() {
-  return { type: actionTypes.INCREMENT };
+export function previousPage() {
+  return { type: actionTypes.PREVIOUS_PAGE };
 }
 
-export function decrement() {
-  return { type: actionTypes.DECREMENT };
+export function nextPage() {
+  return { type: actionTypes.NEXT_PAGE };
+}
+
+export function previousWord() {
+  return { type: actionTypes.PREVIOUS_WORD };
+}
+
+export function nextWord() {
+  return { type: actionTypes.NEXT_WORD };
+}
+
+export function editWord(payload) {
+  return { type: actionTypes.EDIT_WORD, payload };
 }
 
 export function reset() {
