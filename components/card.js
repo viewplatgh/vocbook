@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { nextWord } from "../actions.js";
+import { nextWord } from "../actions";
 const Card = props => {
   const page = props.pages[props.index];
   const word = page.words[page.index];
