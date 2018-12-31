@@ -65,20 +65,58 @@ const Card = props => {
           </li>
         </ul>
       </div>
+      <div className="pages">
+        <ul>
+          {props.pages.map((e, index) => {
+            return (
+              <li key={`k${index}`}>
+                <a
+                  className={
+                    props.index === index
+                      ? "button is-light is-active"
+                      : "button"
+                  }
+                  onClick={e => {
+                    e.stopPropagation();
+                  }}
+                >
+                  {index}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <style jsx>
         {`
           .familiarity {
             text-align: center;
           }
-          ul {
+          .familiarity > ul {
             list-style: none;
           }
-          ul > li {
+          .familiarity > ul > li {
             display: inline;
             margin: 14px;
           }
-          ul > li > a {
+          .familiarity > ul > li > a {
             font-size: 24px;
+          }
+          .pages {
+            margin-top: 78px;
+            text-align: center;
+          }
+          .pages > ul {
+            list-style: none;
+            margin-left: 32px;
+            margin-right: 32px;
+          }
+          .pages > ul > li {
+            display: inline;
+            margin: 5px;
+          }
+          .pages > ul > li > a {
+            margin-top: 10px;
           }
         `}
       </style>
