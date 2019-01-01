@@ -83,6 +83,10 @@ function reducer(state = initialState, action) {
       return nwState;
     }
 
+    case actionTypes.GO_PAGE: {
+      return Object.assign({}, state, action.payload);
+    }
+
     default:
       return state;
   }

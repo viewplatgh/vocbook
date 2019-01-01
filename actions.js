@@ -5,6 +5,7 @@ export const actionTypes = {
   PREVIOUS_WORD: "PREVIOUS_WORD",
   NEXT_WORD: "NEXT_WORD",
   EDIT_WORD: "EDIT_WORD",
+  GO_PAGE: "GO_PAGE",
   RESET: "RESET",
   LOAD_DATA: "LOAD_DATA",
   LOAD_DATA_SUCCESS: "LOAD_DATA_SUCCESS",
@@ -37,6 +38,10 @@ export function nextWord() {
 
 export function editWord(payload) {
   return { type: actionTypes.EDIT_WORD, payload };
+}
+
+export function goPage(payload) {
+  return { type: actionTypes.GO_PAGE, payload };
 }
 
 export function reset() {

@@ -19,17 +19,7 @@ const Layout = props => (
     <div className="navbar">
       <Header />
     </div>
-    <div className="container">
-      <div className="tile is-ancestor">
-        <div className="tile is-12">
-          <div className="tile" />
-          <div className="tile">
-            <div className="tile is-parent">{props.children}</div>
-          </div>
-          <div className="tile" />
-        </div>
-      </div>
-    </div>
+    <div className="container">{props.children}</div>
   </Fragment>
 );
 

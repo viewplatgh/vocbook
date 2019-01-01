@@ -6,7 +6,8 @@ import {
   nextPage,
   previousWord,
   nextWord,
-  editWord
+  editWord,
+  goPage
 } from "../actions.js";
 import Layout from "../components/layout.js";
 import Card from "../components/card.js";
@@ -41,7 +42,8 @@ const mapDispatchToProps = dispatch => {
     nextPage: bindActionCreators(nextPage, dispatch),
     previousWord: bindActionCreators(previousWord, dispatch),
     nextWord: bindActionCreators(nextWord, dispatch),
-    editWord: bindActionCreators(editWord, dispatch)
+    editWord: bindActionCreators(editWord, dispatch),
+    goPage: bindActionCreators(goPage, dispatch)
   };
 };
 
