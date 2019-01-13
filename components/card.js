@@ -1,3 +1,5 @@
+import React from "react";
+
 const Card = props => {
   const page = props.pages[props.index];
   const word = page.words[page.index];
@@ -126,7 +128,7 @@ const Card = props => {
           </a>
         </div>
       </div>
-      <style jsx>
+      <style jsx="true">
         {`
           .familiarity {
             text-align: center;

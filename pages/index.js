@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import React from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -12,7 +13,7 @@ import {
 import Layout from "../components/layout.js";
 import Card from "../components/card.js";
 
-class Index extends React.Component {
+export class Index extends React.Component {
   static async getInitialProps(props) {
     const { store, isServer } = props.ctx;
     return { isServer };
