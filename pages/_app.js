@@ -1,5 +1,5 @@
 import "../node_modules/bulma/css/bulma.css";
-
+import "babel-polyfill";
 import App, { Container } from "next/app";
 import React from "react";
 import { Provider } from "react-redux";

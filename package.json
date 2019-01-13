@@ -21,12 +21,26 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-polyfill": "^6.26.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
     "file-loader": "^3.0.1",
+    "jest": "^23.6.0",
     "node-sass": "^4.11.0",
     "redux-devtools-extension": "^2.13.7",
+    "regenerator-runtime": "^0.13.1",
     "url-loader": "^1.1.2"
   }
 }
